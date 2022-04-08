@@ -5,9 +5,9 @@ import br.com.marcoshssilva.desafiodev.repositories.TransacaoRepository;
 import br.com.marcoshssilva.desafiodev.services.exceptions.NoIdEntityException;
 import br.com.marcoshssilva.desafiodev.services.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class TransacaoService {
@@ -15,8 +15,12 @@ public class TransacaoService {
     @Autowired
     private TransacaoRepository transacaoRepository;
 
-    public Page<Transacao> getAll(Pageable pageable) {
-        return this.transacaoRepository.findAll(pageable);
+    public TransacaoService(TransacaoRepository transacaoRepository) {
+        this.transacaoRepository = transacaoRepository;
+    }
+
+    public List<Transacao> getAll() {
+        return this.transacaoRepository.findAll();
     }
 
     public Transacao getById(Integer id) {

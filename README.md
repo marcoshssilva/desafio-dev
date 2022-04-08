@@ -35,6 +35,7 @@ loja e totalizando seus devidos saldos em conta.
 - Docker 4.3.2
 
 ## Configurações do banco de dados
+
 Ao executar este projeto, configure antes o banco de dados abrindo o arquivo ``src/main/resources/application.properties`, 
 para alterar o usuario, host e senha edite as seguintes linhas:
 ````
@@ -46,8 +47,14 @@ spring.datasource.username=root
 spring.datasource.password=
 ````
 
+Caso já possua o banco de dados pronto com estrutura e dados prontos, troque
+a estrategia do Hibernate para `update` ou `validate`:
+````
+spring.jpa.hibernate.ddl-auto=update
+````
 
 ## Rodando a aplicação
+
 Clone este projeto, abra a pasta sobre o prompt de comando ou terminal
 e execute os seguintes comandos:
 ````

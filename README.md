@@ -34,6 +34,18 @@ loja e totalizando seus devidos saldos em conta.
 - Java 17 (Oracle JVM)
 - Docker 4.3.2
 
+## Configurações do banco de dados
+Ao executar este projeto, configure antes o banco de dados abrindo o arquivo ``src/main/resources/application.properties`, 
+para alterar o usuario, host e senha edite as seguintes linhas:
+````
+# JDBC Uri possui: host, porta e nome do banco de dados
+spring.datasource.url=jdbc:mysql://localhost:3306/desafiodev
+# Usuario do Banco de dados
+spring.datasource.username=root
+# Senha
+spring.datasource.password=
+````
+
 
 ## Rodando a aplicação
 Clone este projeto, abra a pasta sobre o prompt de comando ou terminal

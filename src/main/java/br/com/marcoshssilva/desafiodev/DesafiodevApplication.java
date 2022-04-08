@@ -6,6 +6,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.TimeZone;
+
 @SpringBootApplication
 public class DesafiodevApplication implements CommandLineRunner{
 
@@ -17,7 +23,12 @@ public class DesafiodevApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		LOG.info("OK!");
+		this.setupTimezone();
+	}
+
+	private void setupTimezone(){
+		TimeZone.setDefault(TimeZone.getTimeZone("America/Sao_Paulo"));
+		LOG.info("Timezone changed to America/Sao_Paulo");
 	}
 
 }

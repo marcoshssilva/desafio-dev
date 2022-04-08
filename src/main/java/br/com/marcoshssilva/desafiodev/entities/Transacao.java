@@ -3,7 +3,7 @@ package br.com.marcoshssilva.desafiodev.entities;
 import br.com.marcoshssilva.desafiodev.entities.enums.TipoTransacao;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -15,7 +15,7 @@ public class Transacao {
     private Integer id;
 
     @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDate data;
+    private LocalDateTime data;
 
     @Column(nullable = false)
     private String cpf;
@@ -63,11 +63,11 @@ public class Transacao {
         this.id = id;
     }
 
-    public LocalDate getData() {
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
 

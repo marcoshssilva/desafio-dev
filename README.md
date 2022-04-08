@@ -47,6 +47,13 @@ spring.datasource.username=root
 spring.datasource.password=
 ````
 
+Para a execução devida do projeto, abra seu servidor MySQL e crie o banco de dados:
+````
+CREATE DATABASE `desafiodev`;
+````
+De acordo com a configuração no `application.properties`.
+
+
 Caso já possua o banco de dados pronto com estrutura e dados prontos, troque
 a estrategia do Hibernate para `update` ou `validate`:
 ````

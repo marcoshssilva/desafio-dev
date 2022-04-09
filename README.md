@@ -15,7 +15,7 @@ loja e totalizando seus devidos saldos em conta.
 
 ## Etapas do Projeto
 
-1. Modelagem e Integração com Banco de dados -> não concluido
+1. Modelagem e Integração com Banco de dados -> **concluido**
 2. Operações de Cadastro -> não concluido
 3. Operações de Listagem -> não concluido
 4. Autenticação e Autorização -> não concluido
@@ -65,6 +65,7 @@ spring.jpa.hibernate.ddl-auto=update
 Clone este projeto, abra a pasta sobre o prompt de comando ou terminal
 e execute os seguintes comandos:
 ````
+mvnw clean
 mvnw install
 java -jar target/desafiodev-0.0.1-SNAPSHOT.jar
 ````

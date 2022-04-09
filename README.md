@@ -16,8 +16,8 @@ loja e totalizando seus devidos saldos em conta.
 ## Etapas do Projeto
 
 1. Modelagem e Integração com Banco de dados -> **concluido**
-2. Operações de Cadastro -> não concluido
-3. Operações de Listagem -> não concluido
+2. Operações de Cadastro -> **concluido**
+3. Operações de Listagem -> **concluido**
 4. Autenticação e Autorização -> não concluido
 5. Testes de Unidade -> **concluido**
 6. Interface Web -> não concluido

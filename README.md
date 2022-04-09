@@ -67,5 +67,14 @@ e execute os seguintes comandos:
 ````
 mvnw clean
 mvnw install
-java -jar target/desafiodev-0.0.1-SNAPSHOT.jar
+mvnw spring-boot::run
 ````
+Enquanto o projeto estiver em plena execução, você pode acessa-lo pelo host:
+`localhost:8080`.
+
+Caso queira trocar a porta, basta abrir o arquivo `src/main/resources/application.properties`
+e adicionar a seguinte linha:
+````
+server.port=%SUA PORTA DESEJADA AQUI%
+````
+Em seguida refaça os comando acima.

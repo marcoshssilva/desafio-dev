@@ -1,6 +1,7 @@
 package br.com.marcoshssilva.desafiodev.controllers;
 
 import br.com.marcoshssilva.desafiodev.entities.Transacao;
+import br.com.marcoshssilva.desafiodev.models.LojaModelDto;
 import br.com.marcoshssilva.desafiodev.services.FileReaderTransacoesUtilService;
 import br.com.marcoshssilva.desafiodev.services.TransacaoService;
 import br.com.marcoshssilva.desafiodev.services.exceptions.ValidationException;
@@ -29,6 +30,12 @@ public class TransacaoController {
     public ResponseEntity<List<Transacao>> getAllTransacoes() {
         List<Transacao> transacaos = this.transacaoService.getAll();
         return ResponseEntity.ok(transacaos);
+    }
+
+    @GetMapping("/lojas")
+    public ResponseEntity<List<LojaModelDto>> getAllTransacoesResumedByLoja() {
+        List<LojaModelDto> lojas = this.transacaoService.getAllResumedByLoja();
+        return ResponseEntity.ok(lojas);
     }
 
     @PostMapping("/upload")

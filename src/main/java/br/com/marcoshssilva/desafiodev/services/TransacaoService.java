@@ -1,6 +1,8 @@
 package br.com.marcoshssilva.desafiodev.services;
 
 import br.com.marcoshssilva.desafiodev.entities.Transacao;
+import br.com.marcoshssilva.desafiodev.models.LojaModelDto;
+import br.com.marcoshssilva.desafiodev.models.TransacaoModelForLojaModelDto;
 import br.com.marcoshssilva.desafiodev.repositories.TransacaoRepository;
 import br.com.marcoshssilva.desafiodev.services.exceptions.NoIdEntityException;
 import br.com.marcoshssilva.desafiodev.services.exceptions.NotFoundException;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class TransacaoService {
@@ -43,6 +46,23 @@ public class TransacaoService {
         if (!this.transacaoRepository.existsById(transacao.getId())) throw new NotFoundException();
         // apagando no banco de dados
         this.transacaoRepository.delete(transacao);
+    }
+
+    public List<LojaModelDto> getAllResumedByLoja() {
+        List<String> lojasString = transacaoRepository.findNomesLoja();
+        List<LojaModelDto>  lojasModel = lojasString.stream().map(loja -> new LojaModelDto(loja)).toList();
+
+        lojasModel.forEach(loja -> {
+            List<Transacao> transacaos = transacaoRepository.findAllByNomeLoja(loja.getNomeLoja());
+            loja.setTransacoes(
+                    transacaos
+                            .stream()
+                            .map(transacao -> TransacaoModelForLojaModelDto.fromTransacao(transacao))
+                            .toList()
+            );
+        });
+
+        return lojasModel;
     }
 
 }

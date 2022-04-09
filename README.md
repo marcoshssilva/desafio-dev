@@ -19,7 +19,7 @@ loja e totalizando seus devidos saldos em conta.
 2. Operações de Cadastro -> não concluido
 3. Operações de Listagem -> não concluido
 4. Autenticação e Autorização -> não concluido
-5. Testes de Unidade -> não concluido
+5. Testes de Unidade -> **concluido**
 6. Interface Web -> não concluido
 7. Documentação da API -> não concluido
 8. Configuração para Docker Compose -> não concluido

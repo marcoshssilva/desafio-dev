@@ -1,8 +1,5 @@
 package br.com.marcoshssilva.desafiodev.controllers;
 
-import br.com.marcoshssilva.desafiodev.entities.Transacao;
-import br.com.marcoshssilva.desafiodev.models.LojaModelDto;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -13,13 +10,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
@@ -32,43 +25,27 @@ public class TransacaoControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private TransacaoController transacaoController;
+    TransacaoController transacaoController;
 
     MockMultipartFile fileValid = new MockMultipartFile("file", "hello.txt", MediaType.TEXT_PLAIN_VALUE, "3201903010000014200096206760174753****3153153453JOÃO MACEDO   BAR DO JOÃO       ".getBytes());
     MockMultipartFile file422 = new MockMultipartFile("file", "error.pdf", MediaType.APPLICATION_PDF_VALUE, "Hello, World!".getBytes());
 
     @Test
-    public void shouldExecutePerfectlyAndReturnStatus200() throws Exception {
-        List<Transacao> transacaosMock = new ArrayList<>();
-        Mockito
-            .when(transacaoController.getAllTransacoes())
-            .thenReturn(ResponseEntity.ok(transacaosMock));
-
+    public void shouldReturnAllTransacoesAndStatus200() throws Exception {
         this.mockMvc
                 .perform(
                         get("/transacoes"))
                 .andExpect(
-                        MockMvcResultMatchers.status().is2xxSuccessful())
-                .andExpect(
-                        MockMvcResultMatchers.content().contentType("application/json")
-                );
+                        MockMvcResultMatchers.status().is2xxSuccessful());
     }
 
     @Test
-    public void shouldExecutePerfectlyAndReturnStatus200AndContent() throws Exception {
-        List<LojaModelDto> lojasMock = new ArrayList<>();
-        Mockito
-                .when(transacaoController.getAllTransacoesResumedByLoja())
-                .thenReturn(ResponseEntity.ok(lojasMock));
-
+    public void shouldReturnAllLojasAndStatus200() throws Exception {
         this.mockMvc
                 .perform(
                         get("/transacoes/lojas"))
                 .andExpect(
-                        MockMvcResultMatchers.status().is2xxSuccessful())
-                .andExpect(
-                        MockMvcResultMatchers.content().contentType("application/json")
-                );
+                        MockMvcResultMatchers.status().is2xxSuccessful());
     }
 
     @Test
@@ -96,4 +73,5 @@ public class TransacaoControllerTest {
                         MockMvcResultMatchers.status().isUnprocessableEntity()
                 );
     }
+
 }

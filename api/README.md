@@ -26,13 +26,18 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## Rodando a aplicação
 
-Clone este projeto, abra a pasta sobre o prompt de comando ou terminal
+Clone este projeto, abra a pasta `api` sobre o prompt de comando ou terminal
 e execute os seguintes comandos:
 ````
-mvnw clean
-mvnw install
+./mvnw clean
+./mvnw install
+java -jar target/desafiodev-0.0.1-SNAPSHOT.jar
+````
+Ou simplemente, execute:
+````
 mvnw spring-boot::run
 ````
+
 Enquanto o projeto estiver em plena execução, você pode acessa-lo pelo host:
 `localhost:8080`.
 

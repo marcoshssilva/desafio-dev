@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransacaoService } from './shared/services/transacao.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafiodev-frontend';
+  constructor(
+    private transacaoService : TransacaoService
+  ) {}
+
+  get Lojas$() {
+    return this.transacaoService.getTransacoesResumedByLoja();
+  }
 }

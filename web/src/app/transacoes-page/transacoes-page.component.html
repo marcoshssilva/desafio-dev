@@ -1,0 +1,21 @@
+<div *ngFor="let loja of Lojas">
+  <h2> {{ loja.nomeLoja }} </h2>
+  <h3> Transações </h3>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr *ngFor="let transacao of loja.transacoes">
+        <td> {{ transacao.sinal }} </td>
+        <td> {{ transacao.data | date : 'yyyy-MM-dd HH:mm:ss' }}</td>
+        <td> {{ transacao.tipo }}</td>
+        <td> {{ transacao.cartao }}</td>
+        <td> {{ transacao.cpf }}</td>
+        <td> {{ transacao.natureza }} </td>
+        <td> {{ transacao.valor | currency : 'BRL' }} </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3> Saldo </h3>
+  <p> {{ loja.saldo | currency : 'BRL' }} </p>
+</div>
+

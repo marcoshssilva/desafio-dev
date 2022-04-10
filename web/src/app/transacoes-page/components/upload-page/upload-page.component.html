@@ -1,1 +1,22 @@
-<p>upload-page works!</p>
+<div class="row">
+
+  <h3> Upload de Arquivo</h3>
+
+  <div class="col-12">
+
+    <div class="input-group">
+      <input type="file"
+        (change)="onFileChoose($event)"
+        class="form-control">
+
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        [disabled]="!file"
+        (click)="uploadFile()">Enviar</button>
+
+    </div>
+
+  </div>
+
+</div>

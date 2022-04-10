@@ -1,4 +1,4 @@
-package br.com.marcoshssilva.desafiodev.controllers;
+package br.com.marcoshssilva.desafiodev.config;
 
 import br.com.marcoshssilva.desafiodev.models.ErrorModel;
 import br.com.marcoshssilva.desafiodev.services.exceptions.NoIdEntityException;

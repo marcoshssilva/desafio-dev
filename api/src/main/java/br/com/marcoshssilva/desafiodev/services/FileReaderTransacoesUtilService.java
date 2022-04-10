@@ -38,7 +38,12 @@ public class FileReaderTransacoesUtilService {
             // linha dos dados transacao
             String transacaoString = scanner.nextLine();
             // caso não seja válido
-            checkValidityTransacaoString(transacaoString);
+            try {
+                checkValidityTransacaoString(transacaoString);
+            } catch (ValidationException e) {
+                throw new ValidationException("Erro em linha: " + numberLine + " " + e.getMessage());
+            }
+
             // valor deve ser divido por 100
             Double valor = Double.parseDouble(transacaoString.substring(9, 19)) / 100;
 

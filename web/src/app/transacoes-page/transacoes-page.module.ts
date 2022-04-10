@@ -6,6 +6,7 @@ import { TransacoesPageComponent } from './transacoes-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { UploadPageComponent } from './components/upload-page/upload-page.component';
 import { LojasPageComponent } from './components/lojas-page/lojas-page.component';
+import { CpfPipe } from '../shared/pipes/cpf.pipe';
 
 
 @NgModule({

@@ -6,13 +6,17 @@ import { CpfPipe } from './pipes/cpf.pipe';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CpfPipe
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
   ],
   providers: [
-    TransacaoService,
+    TransacaoService
+  ],
+  exports: [
     CpfPipe
   ]
 })

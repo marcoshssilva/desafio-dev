@@ -1,9 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'cpf' })
+@Pipe({
+  name: 'cpf'
+})
 export class CpfPipe implements PipeTransform {
-    transform(value: string|number): string {
-        let valorFormatado = value + '';
+
+  transform(value: unknown, ...args: unknown[]): unknown {
+    let valorFormatado = value + '';
 
         valorFormatado = valorFormatado
             .padStart(11, '0')
@@ -15,5 +18,6 @@ export class CpfPipe implements PipeTransform {
             );
 
         return valorFormatado;
-    }
+  }
+
 }

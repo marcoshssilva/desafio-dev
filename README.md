@@ -26,16 +26,22 @@ Links:
 - FrontEnd (**localhost:81**)
 ---
 
+## Visualizando a documentação da API
+
+Rode o projeto, para abrir a documentação pelo Swagger abra o link `localhost:8080/swagger-ui.html`.
+Também é possível consultar a api em Json pelo end-point `localhost:8080/v2/api-docs`.
+
 ## Etapas do Projeto
 
 1. Modelagem e Integração com Banco de dados -> **concluido**
 2. Operações de Cadastro -> **concluido**
 3. Operações de Listagem -> **concluido**
-4. Autenticação e Autorização -> não concluido
-5. Testes de Unidade -> **concluido**
-6. Interface Web -> **concluido**
-7. Documentação da API -> não concluido
-8. Configuração para Docker Compose -> **concluido**
+4. Testes de Unidade -> **concluido**
+5. Interface Web -> **concluido**
+6. Documentação da API -> **concluido**
+7. Configuração para Docker Compose -> **concluido**
+
+8. Autenticação e Autorização -> não concluido por falta de tempo.
 
 
 ## Meu Setup
@@ -45,4 +51,5 @@ Links:
 - MySQL 8.0.63
 - Maven 3.5.8
 - Java 17 (Oracle JVM)
+- NodeJs 16
 - Docker 4.3.2

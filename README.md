@@ -20,6 +20,12 @@ Abra este clone do projeto no terminal ou CMD, e execute o seguinte comando:
 
 Tenha em mente que é necessário ter instalado em sua máquina o Docker com DockerCompose habilitado.
 
+Links:
+- API (**localhost:8080**)
+- MySQL Server (**localhost:9903**)
+- FrontEnd (**localhost:81**)
+---
+
 ## Etapas do Projeto
 
 1. Modelagem e Integração com Banco de dados -> **concluido**

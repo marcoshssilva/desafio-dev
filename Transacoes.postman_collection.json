@@ -1,0 +1,582 @@
+{
+	"info": {
+		"_postman_id": "914e709b-1f56-434b-a474-c38f22eb282c",
+		"name": "Transacoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar Todas as Transações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/transacoes",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"transacoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200  - Funcionou",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/transacoes",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:11:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"data\": \"2019-03-01T15:34:53\",\n        \"cpf\": \"09620676017\",\n        \"cartao\": \"4753****3153\",\n        \"donoLoja\": \"JOÃO MACEDO\",\n        \"nomeLoja\": \"BAR DO JOÃO\",\n        \"valor\": 142,\n        \"tipo\": \"FINANCIAMENTO\"\n    },\n    {\n        \"id\": 2,\n        \"data\": \"2019-03-01T14:56:07\",\n        \"cpf\": \"55641815063\",\n        \"cartao\": \"3123****7687\",\n        \"donoLoja\": \"MARIA JOSEFINA\",\n        \"nomeLoja\": \"LOJA DO Ó - MATRIZ\",\n        \"valor\": 132,\n        \"tipo\": \"RECEBIMENTO_EMPRESTIMO\"\n    },\n    {\n        \"id\": 3,\n        \"data\": \"2019-03-01T17:27:12\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"6777****1313\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 122,\n        \"tipo\": \"FINANCIAMENTO\"\n    },\n    {\n        \"id\": 4,\n        \"data\": \"2019-03-01T23:42:34\",\n        \"cpf\": \"09620676017\",\n        \"cartao\": \"3648****0099\",\n        \"donoLoja\": \"JOÃO MACEDO\",\n        \"nomeLoja\": \"BAR DO JOÃO\",\n        \"valor\": 112,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 5,\n        \"data\": \"2019-03-01T23:30:00\",\n        \"cpf\": \"09620676017\",\n        \"cartao\": \"1234****7890\",\n        \"donoLoja\": \"JOÃO MACEDO\",\n        \"nomeLoja\": \"BAR DO JOÃO\",\n        \"valor\": 152,\n        \"tipo\": \"DEBITO\"\n    },\n    {\n        \"id\": 6,\n        \"data\": \"2019-03-01T12:33:33\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"8723****9987\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 107,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 7,\n        \"data\": \"2019-03-01T23:12:33\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"8473****1231\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 502,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 8,\n        \"data\": \"2019-03-01T17:27:12\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"6777****1313\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 602,\n        \"tipo\": \"FINANCIAMENTO\"\n    },\n    {\n        \"id\": 9,\n        \"data\": \"2019-03-01T09:00:02\",\n        \"cpf\": \"55641815063\",\n        \"cartao\": \"1234****3324\",\n        \"donoLoja\": \"MARIA JOSEFINA\",\n        \"nomeLoja\": \"LOJA DO Ó - MATRIZ\",\n        \"valor\": 200,\n        \"tipo\": \"DEBITO\"\n    },\n    {\n        \"id\": 10,\n        \"data\": \"2019-03-01T14:56:07\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"3123****7687\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 802,\n        \"tipo\": \"RECEBIMENTO_EMPRESTIMO\"\n    },\n    {\n        \"id\": 11,\n        \"data\": \"2019-03-01T23:12:33\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"8473****1231\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 102,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 12,\n        \"data\": \"2019-03-01T17:27:12\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"6777****1313\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 6102,\n        \"tipo\": \"FINANCIAMENTO\"\n    },\n    {\n        \"id\": 13,\n        \"data\": \"2019-03-01T10:00:00\",\n        \"cpf\": \"55641815063\",\n        \"cartao\": \"1234****6678\",\n        \"donoLoja\": \"MARIA JOSEFINA\",\n        \"nomeLoja\": \"LOJA DO Ó - FILIAL\",\n        \"valor\": 152.32,\n        \"tipo\": \"CREDITO\"\n    },\n    {\n        \"id\": 14,\n        \"data\": \"2019-03-01T12:32:22\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"2344****1222\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 102.03,\n        \"tipo\": \"RECEBIMENTO_DOC\"\n    },\n    {\n        \"id\": 15,\n        \"data\": \"2019-03-01T17:27:12\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"6777****1313\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 103,\n        \"tipo\": \"FINANCIAMENTO\"\n    },\n    {\n        \"id\": 16,\n        \"data\": \"2019-03-01T00:00:00\",\n        \"cpf\": \"55641815063\",\n        \"cartao\": \"6228****9090\",\n        \"donoLoja\": \"MARIA JOSEFINA\",\n        \"nomeLoja\": \"LOJA DO Ó - MATRIZ\",\n        \"valor\": 102,\n        \"tipo\": \"ALUGUEL\"\n    },\n    {\n        \"id\": 17,\n        \"data\": \"2019-06-01T10:00:00\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"1234****2231\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 506.17,\n        \"tipo\": \"CREDITO\"\n    },\n    {\n        \"id\": 18,\n        \"data\": \"2019-03-01T12:33:33\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"8723****9987\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 109,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 19,\n        \"data\": \"2019-03-01T12:32:22\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"2344****1222\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 2,\n        \"tipo\": \"RECEBIMENTO_DOC\"\n    },\n    {\n        \"id\": 20,\n        \"data\": \"2019-03-01T14:18:08\",\n        \"cpf\": \"23270298056\",\n        \"cartao\": \"7677****8778\",\n        \"donoLoja\": \"JOSÉ COSTA\",\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"valor\": 5,\n        \"tipo\": \"BOLETO\"\n    },\n    {\n        \"id\": 21,\n        \"data\": \"2019-03-01T17:27:12\",\n        \"cpf\": \"84515254073\",\n        \"cartao\": \"6777****1313\",\n        \"donoLoja\": \"MARCOS PEREIRA\",\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"valor\": 192,\n        \"tipo\": \"FINANCIAMENTO\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Upload das Transações por Arquivo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Marcos/Documents/GitHub Clones/desafio-dev/CNAB.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{SERVER}}/transacoes/upload",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"transacoes",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "422 - Caso arquivo não seja do formato TXT",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Marcos/Pictures/gato.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/transacoes/upload",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes",
+								"upload"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:02:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2022-04-10T22:02:21.891+00:00\",\n    \"status\": 422,\n    \"error\": \"Arquivo não é um formato válido.\",\n    \"path\": \"\"\n}"
+				},
+				{
+					"name": "204 - Caso arquivo seja perfeitamente válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Marcos/Documents/GitHub Clones/desafio-dev/CNAB.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/transacoes/upload",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes",
+								"upload"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:03:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "422 - Caso exista erro de validação em alguma linha",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Marcos/Desktop/CNAB.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/transacoes/upload",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes",
+								"upload"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:08:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2022-04-10T22:08:22.040+00:00\",\n    \"status\": 422,\n    \"error\": \"Erro em linha: 6 LENGTH invalido.\",\n    \"path\": \"\"\n}"
+				},
+				{
+					"name": "400 - Caso não seja passado atributo File, ou com Parametro diferente do esperado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/transacoes/upload",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes",
+								"upload"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:10:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2022-04-10T22:10:03.721+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/transacoes/upload\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Buscar Todas as Transações Resumidas por Loja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/transacoes/lojas",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"transacoes",
+						"lojas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Funcionou",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/transacoes/lojas",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"transacoes",
+								"lojas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 22:12:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"nomeLoja\": \"BAR DO JOÃO\",\n        \"transacoes\": [\n            {\n                \"data\": \"2019-03-01T15:34:53\",\n                \"cpf\": \"09620676017\",\n                \"cartao\": \"4753****3153\",\n                \"valor\": 142,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T23:42:34\",\n                \"cpf\": \"09620676017\",\n                \"cartao\": \"3648****0099\",\n                \"valor\": 112,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T23:30:00\",\n                \"cpf\": \"09620676017\",\n                \"cartao\": \"1234****7890\",\n                \"valor\": 152,\n                \"tipo\": \"DEBITO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            }\n        ],\n        \"saldo\": -102\n    },\n    {\n        \"nomeLoja\": \"LOJA DO Ó - MATRIZ\",\n        \"transacoes\": [\n            {\n                \"data\": \"2019-03-01T14:56:07\",\n                \"cpf\": \"55641815063\",\n                \"cartao\": \"3123****7687\",\n                \"valor\": 132,\n                \"tipo\": \"RECEBIMENTO_EMPRESTIMO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-03-01T09:00:02\",\n                \"cpf\": \"55641815063\",\n                \"cartao\": \"1234****3324\",\n                \"valor\": 200,\n                \"tipo\": \"DEBITO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-03-01T00:00:00\",\n                \"cpf\": \"55641815063\",\n                \"cartao\": \"6228****9090\",\n                \"valor\": 102,\n                \"tipo\": \"ALUGUEL\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            }\n        ],\n        \"saldo\": 230\n    },\n    {\n        \"nomeLoja\": \"MERCADO DA AVENIDA\",\n        \"transacoes\": [\n            {\n                \"data\": \"2019-03-01T17:27:12\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"6777****1313\",\n                \"valor\": 122,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T12:33:33\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"8723****9987\",\n                \"valor\": 107,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T23:12:33\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"8473****1231\",\n                \"valor\": 502,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T14:56:07\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"3123****7687\",\n                \"valor\": 802,\n                \"tipo\": \"RECEBIMENTO_EMPRESTIMO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-03-01T12:32:22\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"2344****1222\",\n                \"valor\": 102.03,\n                \"tipo\": \"RECEBIMENTO_DOC\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-06-01T10:00:00\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"1234****2231\",\n                \"valor\": 506.17,\n                \"tipo\": \"CREDITO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-03-01T12:32:22\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"2344****1222\",\n                \"valor\": 2,\n                \"tipo\": \"RECEBIMENTO_DOC\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            },\n            {\n                \"data\": \"2019-03-01T17:27:12\",\n                \"cpf\": \"84515254073\",\n                \"cartao\": \"6777****1313\",\n                \"valor\": 192,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            }\n        ],\n        \"saldo\": 489.20000000000005\n    },\n    {\n        \"nomeLoja\": \"MERCEARIA 3 IRMÃOS\",\n        \"transacoes\": [\n            {\n                \"data\": \"2019-03-01T17:27:12\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"6777****1313\",\n                \"valor\": 602,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T23:12:33\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"8473****1231\",\n                \"valor\": 102,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T17:27:12\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"6777****1313\",\n                \"valor\": 6102,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T17:27:12\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"6777****1313\",\n                \"valor\": 103,\n                \"tipo\": \"FINANCIAMENTO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T12:33:33\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"8723****9987\",\n                \"valor\": 109,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            },\n            {\n                \"data\": \"2019-03-01T14:18:08\",\n                \"cpf\": \"23270298056\",\n                \"cartao\": \"7677****8778\",\n                \"valor\": 5,\n                \"tipo\": \"BOLETO\",\n                \"natureza\": \"SAIDA\",\n                \"sinal\": \"-\"\n            }\n        ],\n        \"saldo\": -7023\n    },\n    {\n        \"nomeLoja\": \"LOJA DO Ó - FILIAL\",\n        \"transacoes\": [\n            {\n                \"data\": \"2019-03-01T10:00:00\",\n                \"cpf\": \"55641815063\",\n                \"cartao\": \"1234****6678\",\n                \"valor\": 152.32,\n                \"tipo\": \"CREDITO\",\n                \"natureza\": \"ENTRADA\",\n                \"sinal\": \"+\"\n            }\n        ],\n        \"saldo\": 152.32\n    }\n]"
+				}
+			]
+		}
+	]
+}

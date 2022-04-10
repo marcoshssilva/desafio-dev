@@ -13,6 +13,13 @@ Esta mesma interface WEB deve consultar e mostrar todos as transações registra
 loja e totalizando seus devidos saldos em conta.
 ---
 
+## Executando o Projeto
+
+Abra este clone do projeto no terminal ou CMD, e execute o seguinte comando:
+`docker-compose -f "docker-compose.yml" up -d --build`.
+
+Tenha em mente que é necessário ter instalado em sua máquina o Docker com DockerCompose habilitado.
+
 ## Etapas do Projeto
 
 1. Modelagem e Integração com Banco de dados -> **concluido**
@@ -22,7 +29,7 @@ loja e totalizando seus devidos saldos em conta.
 5. Testes de Unidade -> **concluido** (Controller com Teste apenas POSTMAN)
 6. Interface Web -> **concluido**
 7. Documentação da API -> não concluido
-8. Configuração para Docker Compose -> não concluido
+8. Configuração para Docker Compose -> **concluido**
 
 
 ## Meu Setup

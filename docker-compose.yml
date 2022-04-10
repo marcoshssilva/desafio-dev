@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  mysql-standalone:
+    image: 'mysql:5.7'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=desafiodev
+    ports:
+      - "9903:3306"
+  desafiodev-api:
+    image: 'desafiodev-api-marcoshssilva'
+    build:
+      context: ./api
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-standalone:3306/desafiodev?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "root"
+    depends_on:
+      - mysql-standalone
+  angular-front:
+    image: 'desafiodev-frontend-marcoshssilva'
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    ports:
+      - 81:80
+  

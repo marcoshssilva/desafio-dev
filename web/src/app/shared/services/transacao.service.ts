@@ -16,4 +16,18 @@ export class TransacaoService {
       { responseType: 'json', observe: 'body' }
     );
   }
+
+  public uploadFile(fileUpload: File) {
+    const formData = new FormData();
+    formData.append('file', fileUpload);
+
+    return this.http.post(
+      `${environment.api_host}/transacoes/upload`,
+      formData,
+      {
+        observe: 'response',
+        responseType: 'json',
+      }
+    );
+  }
 }

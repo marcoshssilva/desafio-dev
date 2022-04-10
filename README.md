@@ -20,7 +20,7 @@ loja e totalizando seus devidos saldos em conta.
 3. Operações de Listagem -> **concluido**
 4. Autenticação e Autorização -> não concluido
 5. Testes de Unidade -> **concluido** (Controller com Teste apenas POSTMAN)
-6. Interface Web -> não concluido
+6. Interface Web -> **concluido**
 7. Documentação da API -> não concluido
 8. Configuração para Docker Compose -> não concluido
 

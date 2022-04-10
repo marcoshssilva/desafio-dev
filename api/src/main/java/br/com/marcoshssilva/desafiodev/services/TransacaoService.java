@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class TransacaoService {
@@ -41,7 +40,7 @@ public class TransacaoService {
 
     public void delete(Transacao transacao) {
         // caso objeto não possua ID ou seja nulo
-        if (transacao == null || transacao.getId() == null) throw new NoIdEntityException();
+        if (transacao == null || transacao.getId() == null) throw new NoIdEntityException("Faltando o ID do objeto");
         // caso objeto não exista no banco
         if (!this.transacaoRepository.existsById(transacao.getId())) throw new NotFoundException();
         // apagando no banco de dados

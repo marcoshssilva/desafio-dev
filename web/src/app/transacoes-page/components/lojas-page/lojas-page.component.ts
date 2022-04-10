@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LojaModel } from 'src/app/shared/models/LojaModel';
+import { TransacaoService } from 'src/app/shared/services/transacao.service';
 
 @Component({
   selector: 'app-lojas-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LojasPageComponent implements OnInit {
 
-  constructor() { }
+  private lojas : LojaModel[] = []
+
+  constructor(
+    private transacaoService : TransacaoService
+  ) {}
 
   ngOnInit(): void {
+    this.transacaoService.getTransacoesResumedByLoja().subscribe(data => {
+      this.lojas = data
+    })
+  }
+
+  get Lojas() : LojaModel[] {
+    return this.lojas
   }
 
 }

@@ -1,21 +1,27 @@
-<div *ngFor="let loja of Lojas">
-  <h2> {{ loja.nomeLoja }} </h2>
-  <h3> Transações </h3>
-  <table>
-    <thead></thead>
-    <tbody>
-      <tr *ngFor="let transacao of loja.transacoes">
-        <td> {{ transacao.sinal }} </td>
-        <td> {{ transacao.data | date : 'yyyy-MM-dd HH:mm:ss' }}</td>
-        <td> {{ transacao.tipo }}</td>
-        <td> {{ transacao.cartao }}</td>
-        <td> {{ transacao.cpf }}</td>
-        <td> {{ transacao.natureza }} </td>
-        <td> {{ transacao.valor | currency : 'BRL' }} </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3> Saldo </h3>
-  <p> {{ loja.saldo | currency : 'BRL' }} </p>
-</div>
+<nav class="navbar navbar-expand-md navbar-light bg-info mb-3">
+  <div class="container">
+    <a href="#" class="navbar-brand">DESAFIO-DEV</a>
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+      aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="lojas">Ver Lojas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="upload">Upload</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<main class="container">
+  <!-- redireciona para rota -->
+  <router-outlet></router-outlet>
+</main>

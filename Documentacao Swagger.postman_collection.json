@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "71816516-53a5-4e81-be13-d3f4d3f46c05",
+		"name": "Documentacao Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v2/docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/v2/api-docs",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "v2/docs JSON",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/v2/api-docs",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Apr 2022 23:11:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"swagger\": \"2.0\",\n    \"info\": {\n        \"description\": \"Api Documentation\",\n        \"version\": \"1.0\",\n        \"title\": \"Api Documentation\",\n        \"termsOfService\": \"urn:tos\",\n        \"contact\": {},\n        \"license\": {\n            \"name\": \"Apache 2.0\",\n            \"url\": \"http://www.apache.org/licenses/LICENSE-2.0\"\n        }\n    },\n    \"host\": \"localhost:8080\",\n    \"basePath\": \"/\",\n    \"tags\": [\n        {\n            \"name\": \"transacao-controller\",\n            \"description\": \"Transacao Controller\"\n        }\n    ],\n    \"paths\": {\n        \"/transacoes\": {\n            \"get\": {\n                \"tags\": [\n                    \"transacao-controller\"\n                ],\n                \"summary\": \"Retorna uma lista de transacoes\",\n                \"operationId\": \"getAllTransacoesUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/Transacao\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                },\n                \"deprecated\": false\n            }\n        },\n        \"/transacoes/lojas\": {\n            \"get\": {\n                \"tags\": [\n                    \"transacao-controller\"\n                ],\n                \"summary\": \"Retorna uma lista de lojas com suas correspondentes transacoes e saldo\",\n                \"operationId\": \"getAllTransacoesResumedByLojaUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/LojaModelDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                },\n                \"deprecated\": false\n            }\n        },\n        \"/transacoes/upload\": {\n            \"post\": {\n                \"tags\": [\n                    \"transacao-controller\"\n                ],\n                \"summary\": \"Faz upload de um arquivo para ler e salvar suas transações\",\n                \"operationId\": \"uploadTransacoesByFileUsingPOST\",\n                \"consumes\": [\n                    \"multipart/form-data\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"file\",\n                        \"in\": \"formData\",\n                        \"description\": \"file\",\n                        \"required\": true,\n                        \"type\": \"file\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"object\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                },\n                \"deprecated\": false\n            }\n        }\n    },\n    \"definitions\": {\n        \"LojaModelDto\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"nomeLoja\": {\n                    \"type\": \"string\"\n                },\n                \"saldo\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                },\n                \"transacoes\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"$ref\": \"#/definitions/TransacaoModelForLojaModelDto\"\n                    }\n                }\n            },\n            \"title\": \"LojaModelDto\"\n        },\n        \"Transacao\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"cartao\": {\n                    \"type\": \"string\"\n                },\n                \"cpf\": {\n                    \"type\": \"string\"\n                },\n                \"data\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"donoLoja\": {\n                    \"type\": \"string\"\n                },\n                \"id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"nomeLoja\": {\n                    \"type\": \"string\"\n                },\n                \"tipo\": {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"DEBITO\",\n                        \"BOLETO\",\n                        \"FINANCIAMENTO\",\n                        \"CREDITO\",\n                        \"RECEBIMENTO_EMPRESTIMO\",\n                        \"VENDAS\",\n                        \"RECEBIMENTO_TED\",\n                        \"RECEBIMENTO_DOC\",\n                        \"ALUGUEL\"\n                    ]\n                },\n                \"valor\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                }\n            },\n            \"title\": \"Transacao\"\n        },\n        \"TransacaoModelForLojaModelDto\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"cartao\": {\n                    \"type\": \"string\"\n                },\n                \"cpf\": {\n                    \"type\": \"string\"\n                },\n                \"data\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"natureza\": {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"ENTRADA\",\n                        \"SAIDA\"\n                    ]\n                },\n                \"sinal\": {\n                    \"type\": \"string\"\n                },\n                \"tipo\": {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"DEBITO\",\n                        \"BOLETO\",\n                        \"FINANCIAMENTO\",\n                        \"CREDITO\",\n                        \"RECEBIMENTO_EMPRESTIMO\",\n                        \"VENDAS\",\n                        \"RECEBIMENTO_TED\",\n                        \"RECEBIMENTO_DOC\",\n                        \"ALUGUEL\"\n                    ]\n                },\n                \"valor\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                }\n            },\n            \"title\": \"TransacaoModelForLojaModelDto\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}

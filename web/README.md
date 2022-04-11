@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
+
+## Importante
+
+Caso queira executar este projeto, **fora do Docker**, primeiro é necessário instalar as dependencias e o `@Angular/CLI`.
+
+Rode `npm install` para instalar as dependencias pelo NPM.
+
+Rode `npm install -g @angular/cli` para instalar o Angular/cli em sua máquina local.
+
 ## Development server
 
 Rode `ng serve` para rodar o projeto em modo desenvolvimento. Acesse `http://localhost:4200/` para visualizar. O aplicativo irá automaticamente atualizar ao receber novas atualizações no código fonte.

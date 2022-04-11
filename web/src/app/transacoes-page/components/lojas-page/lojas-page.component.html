@@ -46,3 +46,10 @@
   </div>
 
 </div>
+
+<div class="row" *ngIf="Lojas.length == 0">
+  <p>
+    Não existe nenhuma loja cadastrada.
+    Faça o upload dos dados na página <a routerLink="../upload" class="btn-link">Upload</a>
+  </p>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as bootstrap from 'bootstrap';
 import { TransacaoService } from 'src/app/shared/services/transacao.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { TransacaoService } from 'src/app/shared/services/transacao.service';
 })
 export class UploadPageComponent implements OnInit {
   file?: File;
+  error: boolean = false
+  errorMessage:string = ""
 
   constructor(private transacaoService: TransacaoService) {}
 
@@ -15,13 +18,24 @@ export class UploadPageComponent implements OnInit {
 
   onFileChoose(event: any) {
     this.file = event.target.files[0];
+    this.error = false
   }
 
   uploadFile() {
     if (this.file) {
-      this.transacaoService
-        .uploadFile(this.file)
-        .subscribe((data) => console.log(data));
+      this.transacaoService.uploadFile(this.file)
+        .subscribe(() => this.printMessage(),
+          err => {
+            this.error = true
+            this.errorMessage = err.error.error
+          }
+        );
     }
+  }
+
+  printMessage() {
+    var toastElement = document.getElementById('uploadPage_toastMessage');
+    var toast = new bootstrap.Toast(toastElement as Element);
+    toast.show();
   }
 }

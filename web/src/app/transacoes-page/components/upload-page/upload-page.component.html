@@ -4,19 +4,38 @@
 
   <div class="col-12">
 
-    <div class="input-group">
-      <input type="file"
-        (change)="onFileChoose($event)"
-        class="form-control">
+    <p class="alert alert-warning my-2">
+      Arquivo deve estar em formato .txt
+    </p>
 
-      <button
-        class="btn btn-outline-secondary"
-        type="button"
-        [disabled]="!file"
+    <div class="input-group">
+      <input type="file" (change)="onFileChoose($event)" class="form-control">
+
+      <button class="btn btn-outline-secondary" type="button" [disabled]="!file || file?.type !== 'text/plain'"
         (click)="uploadFile()">Enviar</button>
 
     </div>
 
+    <div *ngIf="error">
+      <h3>Falha ao Ler Arquivo</h3>
+      <p [innerText]="errorMessage" class="text-danger"></p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+
+  <div id="uploadPage_toastMessage" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Tudo Certo</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Seu upload foi realizado com sucesso!
+      Veja os dados na aba <strong>Ver Lojas</strong>
+    </div>
   </div>
 
 </div>

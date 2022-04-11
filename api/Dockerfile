@@ -1,6 +1,12 @@
 FROM openjdk:17
-VOLUME /tmp
 
-COPY ./ ./
-ENTRYPOINT ["./mvnw", "spring-boot::run"]
+WORKDIR /api
+
+COPY . .
+
+# RUN ./mvnw install -DskipTests
+# ENTRYPOINT java -jar target/desafiodev-0.0.1-SNAPSHOT.jar
+# DEMORA MUITO MAIS PARA CARREGAR, POREM NAO POSSUI ERRO AO INICIALIZAR AO MESMO TEMPO QUE BANCO DE DADOS
+ENTRYPOINT ./mvnw spring-boot::run
+
 EXPOSE 8080

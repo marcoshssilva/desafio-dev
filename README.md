@@ -18,12 +18,17 @@ loja e totalizando seus devidos saldos em conta.
 Abra este clone do projeto no terminal ou CMD, e execute o seguinte comando:
 `docker-compose -f "docker-compose.yml" up -d --build`.
 
-Tenha em mente que é necessário ter instalado em sua máquina o Docker com DockerCompose habilitado.
+Tenha em mente que é necessário ter instalado em sua máquina o ``Docker com DockerCompose habilitado.
 
 Links:
 - API (**localhost:8080**)
 - MySQL Server (**localhost:9903**)
 - FrontEnd (**localhost:81**)
+
+Antes de abrir no navegador, verifique bem se não há conflitos de porta ou se o projeto ainda esta instalando
+sobre os logs do Docker.
+
+Para alterar as portas globais edite em `docker-compose.yml`.
 ---
 
 ## Visualizando a documentação da API
@@ -43,6 +48,10 @@ Também é possível consultar a api em Json pelo end-point `localhost:8080/v2/a
 
 8. Autenticação e Autorização -> não concluido por falta de tempo.
 
+## Testes no Postman
+
+Os arquivos de teste no Postman são `Documentacao Swagger.postman_collection.json` e `Transacoes.postman_collection.json`.
+Importe para seu Postman para visualizar os testes de execução da API.
 
 ## Meu Setup
 - Windows 11 Pro (64bits)

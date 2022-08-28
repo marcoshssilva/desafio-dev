@@ -54,9 +54,8 @@ Os arquivos de teste no Postman são `Documentacao Swagger.postman_collection.js
 Importe para seu Postman para visualizar os testes de execução da API.
 
 ## Meu Setup
-- Windows 11 Pro (64bits)
-- Acer Aspire 3 (Ryzen7 3700u / 12Gb Ram / 512Gb SSD)
-- IDE's SpringToolSuite4 / VSCode
+- Windows 11
+- IDE's SpringToolSuite4 / VSCode / Intellij
 - MySQL 8.0.63
 - Maven 3.5.8
 - Java 17 (Oracle JVM)
